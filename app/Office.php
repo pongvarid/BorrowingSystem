@@ -8,7 +8,7 @@ class Office extends Model
 {
     protected $table = 'office';
     protected $fillable = [
-        'off_id',
+        'id',
         'user_id',
         'off_role',
         'off_nickname',
