@@ -21,7 +21,7 @@ class CreateItemTable extends Migration
             $table->string('item_detail');
             $table->integer('item_number');
             $table->integer('item_remain');
-            $table->binary('item_img'); //BLOB
+            $table->string('item_img'); //BLOB
             $table->timestamps();
         });
     }

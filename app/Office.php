@@ -8,17 +8,17 @@ class Office extends Model
 {
     protected $table = 'office';
     protected $fillable = [
-        'Off_id',
-        'User_id',
-        'Off_role',
-        'Off_nickname',
-        'Off_name',
-        'Off_lastname',
-        'Off_address',
-        'Off_tel'
+        'off_id',
+        'user_id',
+        'off_role',
+        'off_nickname',
+        'off_name',
+        'off_lastname',
+        'off_address',
+        'off_tel'
     ];
     public function user()
     {
-        return $this->belongsTo('App\User', 'User_id');
+        return $this->belongsTo('App\User', 'user_id');
     }
 }

@@ -8,16 +8,16 @@ class Item extends Model
 {
     protected $table = 'item';
     protected $fillable = [
-        'Item_id',
-        'ItemType_id',
-        'Item_name',
-        'Item_detail',
-        'Item_number',
-        'Item_remain',
-        'Item_img'
+        'id',
+        'type_id',
+        'item_name',
+        'item_detail',
+        'item_number',
+        'item_remain',
+        'item_img'
     ];
     public function ItemType()
     {
-        return $this->belongsTo('App\ItemType', 'ItemType_id');
+        return $this->belongsTo('App\ItemType', 'id');
     }
 }

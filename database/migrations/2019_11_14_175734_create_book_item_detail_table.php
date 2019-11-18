@@ -14,7 +14,7 @@ class CreateBookItemDetailTable extends Migration
     public function up()
     {
         Schema::create('book_item_detail', function (Blueprint $table) {
-            $table->bigIncrements('BookItemDetail_id');
+            $table->bigIncrements('id');
 
             $table->unsignedBigInteger('bookitem_id')->unsigned();
             $table->foreign('bookitem_id')->references('id')->on('book_item')->onUpdate('cascade');
@@ -22,7 +22,7 @@ class CreateBookItemDetailTable extends Migration
             $table->unsignedBigInteger('item_id')->unsigned();
             $table->foreign('item_id')->references('id')->on('item')->onUpdate('cascade');
 
-            $table->integer('BookItemDetail_Number');
+            $table->integer('bookitemdetail_number');
             
             $table->timestamps();
         });

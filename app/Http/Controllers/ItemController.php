@@ -51,7 +51,7 @@ class ItemController extends Controller
      */
     public function show($id)
     {
-        $data = Item::where('Item_id', '=', $id)->first();
+        $data = Item::where('id', '=', $id)->first();
         return $data;
     }
 
@@ -75,7 +75,7 @@ class ItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Item::where('Item_id', '=', $id)->update($request->all());
+        $data = Item::where('id', '=', $id)->update($request->all());
         return $data;
     }
 
@@ -87,7 +87,7 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        $data =  Item::where('Item_id', '=', $id)->delete();
+        $data =  Item::where('id', '=', $id)->delete();
         if ($data) {
             return "success";
         } else {
