@@ -14,14 +14,14 @@ class CreateBookItemTable extends Migration
     public function up()
     {
         Schema::create('book_item', function (Blueprint $table) {
-            $table->bigIncrements('BookItem_id');
-            $table->unsignedBigInteger('Brw_id')->unsigned();
-            $table->foreign('Brw_id')->references('Brw_id')->on('borrower')->onUpdate('cascade');
-            $table->dateTime('BookItem_day');
-            $table->dateTime('BookItem_borrowDay');
-            $table->dateTime('BookItem _deadline');
-            $table->string('BookItem_description');
-            $table->integer('BookItem_status');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('brw_id')->unsigned();
+            $table->foreign('brw_id')->references('id')->on('borrower')->onUpdate('cascade');
+            $table->dateTime('bookitem_day');
+            $table->dateTime('bookitem_borrowDay');
+            $table->dateTime('bookitem_deadline');
+            $table->string('bookitem_description');
+            $table->integer('bookitem_status');
             $table->timestamps();
         });
     }

@@ -14,15 +14,15 @@ class CreateOfficeTable extends Migration
     public function up()
     {
         Schema::create('office', function (Blueprint $table) {
-            $table->bigIncrements('Off_id');
-            $table->unsignedBigInteger('User_id')->unsigned();
-            $table->foreign('User_id')->references('User_id')->on('users')->onUpdate('cascade');
-            $table->integer('Off_role');
-            $table->string('Off_nickname');
-            $table->string('Off_name');
-            $table->string('Off_lastname');
-            $table->string('Off_address');
-            $table->string('Off_tel');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->integer('off_role');
+            $table->string('off_nickname');
+            $table->string('off_firstname');
+            $table->string('off_lastname');
+            $table->string('off_address');
+            $table->string('off_tel');
             $table->timestamps();
         });
     }

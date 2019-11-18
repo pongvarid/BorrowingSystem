@@ -14,15 +14,15 @@ class CreateBorrowerTable extends Migration
     public function up()
     {
         Schema::create('borrower', function (Blueprint $table) {
-            $table->bigIncrements('Brw_id');
-            $table->unsignedBigInteger('User_id')->unsigned();
-            $table->foreign('User_id')->references('User_id')->on('users')->onUpdate('cascade');
-            $table->integer('Brw_IP');
-            $table->string('Brw_TitleName');
-            $table->string('Brw_name');
-            $table->string('Brw_lastname');
-            $table->string('Brw_address');
-            $table->string('Brw_tel');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->integer('brw_ip');
+            $table->string('brw_prefix');
+            $table->string('brw_firstname');
+            $table->string('brw_lastname');
+            $table->string('brw_address');
+            $table->string('brw_tel');
             $table->timestamps();
         });
     }

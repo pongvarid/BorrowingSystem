@@ -14,8 +14,8 @@ class CreateItemTypeTable extends Migration
     public function up()
     {
         Schema::create('item_type', function (Blueprint $table) {
-            $table->bigIncrements('ItemType_id');
-            $table->string('ItemType_name')->nullable();
+            $table->bigIncrements('id');
+            $table->string('type_name')->nullable();
             $table->timestamps();
         });
     }

@@ -16,11 +16,11 @@ class CreateBookItemDetailTable extends Migration
         Schema::create('book_item_detail', function (Blueprint $table) {
             $table->bigIncrements('BookItemDetail_id');
 
-            $table->unsignedBigInteger('BookItem_id')->unsigned();
-            $table->foreign('BookItem_id')->references('BookItem_id')->on('book_item')->onUpdate('cascade');
+            $table->unsignedBigInteger('bookitem_id')->unsigned();
+            $table->foreign('bookitem_id')->references('id')->on('book_item')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('Item_id')->unsigned();
-            $table->foreign('Item_id')->references('Item_id')->on('item')->onUpdate('cascade');
+            $table->unsignedBigInteger('item_id')->unsigned();
+            $table->foreign('item_id')->references('id')->on('item')->onUpdate('cascade');
 
             $table->integer('BookItemDetail_Number');
             

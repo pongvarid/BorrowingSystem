@@ -14,14 +14,14 @@ class CreateItemTable extends Migration
     public function up()
     {
         Schema::create('item', function (Blueprint $table) {
-            $table->bigIncrements('Item_id');
-            $table->unsignedBigInteger('ItemType_id')->unsigned();
-            $table->foreign('ItemType_id')->references('ItemType_id')->on('item_type')->onUpdate('cascade');
-            $table->string('Item_name');
-            $table->string('Item_detail');
-            $table->integer('Item_number');
-            $table->integer('Item_remain');
-            $table->binary('Item_img'); //BLOB
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('type_id')->unsigned();
+            $table->foreign('type_id')->references('id')->on('item_type')->onUpdate('cascade');
+            $table->string('item_name');
+            $table->string('item_detail');
+            $table->integer('item_number');
+            $table->integer('item_remain');
+            $table->binary('item_img'); //BLOB
             $table->timestamps();
         });
     }

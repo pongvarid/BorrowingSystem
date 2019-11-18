@@ -14,19 +14,19 @@ class CreateBorrowItemTable extends Migration
     public function up()
     {
         Schema::create('borrow_item', function (Blueprint $table) {
-            $table->bigIncrements('BorrowItem_id');
+            $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('Brw_id')->unsigned();
-            $table->foreign('Brw_id')->references('Brw_id')->on('borrower')->onUpdate('cascade');
+            $table->unsignedBigInteger('brw_id')->unsigned();
+            $table->foreign('brw_id')->references('id')->on('borrower')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('BookItem_id')->unsigned();
-            $table->foreign('BookItem_id')->references('BookItem_id')->on('book_item')->onUpdate('cascade');
+            $table->unsignedBigInteger('bookitem_id')->unsigned();
+            $table->foreign('bookitem_id')->references('id')->on('book_item')->onUpdate('cascade');
 
-            $table->unsignedBigInteger('Off_id')->unsigned();
-            $table->foreign('Off_id')->references('Off_id')->on('office')->onUpdate('cascade');
+            $table->unsignedBigInteger('off_id')->unsigned();
+            $table->foreign('off_id')->references('id')->on('office')->onUpdate('cascade');
 
-            $table->string('BorrowItem_description');
-            $table->integer('BorrowItem_status');
+            $table->string('borrowitem_description');
+            $table->integer('borrowitem_status');
 
             $table->timestamps();
         });
