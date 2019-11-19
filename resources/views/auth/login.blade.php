@@ -2,6 +2,45 @@
 
 @section('content')
 
+
+<div class="w3-cell-row" style="height:100vh">
+    <div class="w3-container box-green w3-cell w3-cell-middle ">
+     
+            <div class="mrl-60">
+                <h3 class="w3-padding-64 wh w3-left"><b class="fs18">ระบบ<br><b class="fs30">ยืมคืนพัสดุของสงฆ์</b></h3>
+            </div>
+ 
+    </div>
+    <div class="w3-container w3-cell w3-cell-middle">
+        <center>
+            <div style="width:60%;">
+
+                <div class="w3-card-4">
+                    <div class="w3-container w3-green">
+                        <h2>Header</h2>
+                    </div>
+
+                    <form class="w3-container">
+
+                        <label>First Name</label>
+                        <input class="w3-input" type="text">
+
+                        <label>Last Name</label>
+                        <input class="w3-input" type="text">
+
+                    </form>
+
+                </div>
+
+            </div>
+        </center>
+
+    </div>
+</div>
+
+
+
+<!----
 <div class="container-fluid">
     <div class="row align-items-center"> 
         <div class="col-xs-12 col-md-6">
@@ -78,8 +117,14 @@
         </div>
     </div>
 </div>
+--->
 
 
-
+<style>
+    .box-green {
+        background: rgb(39, 201, 107);
+        background: linear-gradient(90deg, rgba(39, 201, 107, 1) 0%, rgba(15, 193, 155, 1) 100%);
+    }
+</style>
 
 @endsection
