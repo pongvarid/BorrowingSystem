@@ -2,35 +2,28 @@
 
 @section('title','รายการประเภทพัสดุของสงฆ์')
 
-@section('header')
-@parent
+@section('aside')
 @endsection
 
 @section('content')
-<div>
-    @if(session()->get('success'))
-    <div class="w3-panel w3-green w3-display-container">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
-        <h3>Success!</h3>
-        <p>{{ session()->get('success') }}</p>
-    </div>
-    @endif
-    <div class="col-md-12 text text-center">
-        <font color="black">
-            <h1>รายการประเภทพัสดุของสงฆ์</h1>
-        </font>
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col-lg-8">
-            <a class="btn btn-success btn-lg" href="/">เพิ่ม</a>
-        </div>
-    </div>
-    <form>
+<div class="container">
+        <div class="col-md-12 text text-center">
+                <font color="black"><h1>รายการประเภทพัสดุของสงฆ์</h1></font>
+            </div>
+                    <div class="row">
+                            <div class="col-lg-8">
+                                <a class="w3-button w3-white w3-border w3-border-green w3-round-large">
+                                    เพิ่ม
+                                </a>
+                                </div>
+
+                    </div>
+<form>
         <font color="black">
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive col-md-12">
+<<<<<<< HEAD
                         <table id="mytable" class="table table-bordred table-striped">
                             <thead>
                                 <th>ลำดับ</th>
@@ -52,6 +45,27 @@
                                                 <button class="btn btn-danger" type="submit">Delete</button>
                                             </form>
                                         </td>
+=======
+                            <table id="mytable" class="w3-table-all">
+                                    <thead>
+                                    <th>ลำดับ</th>
+                                    <th>ประเภทพัสดุ</th>
+                                    <th>แก้ไข</th>
+                                    <th>ลบ</th>
+                                    </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>1</td>
+                                    <td>เครื่องใช้ในครัว</td>
+                                    <td><a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/edittypeitem">แก้ไข</a></td>
+                                    <td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
+                                </tr>
+                                <tr>
+                                        <td>2</td>
+                                        <td>ของใช้นอกสถานที่</td>
+                                        <td><a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/edittypeitem">แก้ไข</a></td>
+                                        <td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
+>>>>>>> 4e998ba8a03cca61a6295423d0c1de3264f5780b
                                     </tr>
                                 <?php } ?>
                             </tbody>
@@ -63,6 +77,7 @@
                         </ul>
 
                     </div>
+<<<<<<< HEAD
 
                 </div>
             </div>
@@ -73,3 +88,9 @@
 @section('script')
 @parent
 @endsection
+=======
+    </font>
+      </form>
+</div>
+    @endsection
+>>>>>>> 4e998ba8a03cca61a6295423d0c1de3264f5780b

@@ -71,11 +71,10 @@
                         </div>
 
                     </div>
-                </div>
-            </font>
-        </form>
-</div>
-@endsection
+    </font>
+      </form>
+    </div>
+    @endsection
 @section('script')
 @parent
 @endsection

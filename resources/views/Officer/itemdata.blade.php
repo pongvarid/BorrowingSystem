@@ -6,30 +6,6 @@
 @parent
 @endsection
 @section('aside')
-<li><a href="/admin">
-        <font size="6">หน้าหลัก</font>
-    </a></li>
-<li><a href="/waititem">
-        <font size="6">รายการพัสดุรอพิจารณา</font>
-    </a></li>
-<li><a href="/borrowandbackitem">
-        <font size="6">รายการยืมคืนพัสดุของสงฆ์</font>
-    </a></li>
-<li><a href="/typeitem">
-        <font size="6">ข้อมูลประเภทพัสดุของสงฆ์</font>
-    </a></li>
-<li class="colorlib-active"><a href="/itemdata">
-        <font size="6">จัดการข้อมูลพัสดุของสงฆ์</font>
-    </a></li>
-<li><a href="/officermanage">
-        <font size="6">จัดการข้อมูลเจ้าหน้าที่</font>
-    </a></li>
-<li><a href="/borrowermange">
-        <font size="6">จัดการข้อมูลผู้ยืม</font>
-    </a></li>
-<li><a href="#">
-        <font size="6">ออกจากระบบ</font>
-    </a></li>
 @endsection
 
 @section('content')
@@ -124,13 +100,10 @@
                         </ul>
 
                     </div>
-
-                </div>
-            </div>
-        </font>
-    </form>
-</div>
-@endsection
+    </font>
+      </form>
+    </div>
+    @endsection
 @section('script')
 @parent
 @endsection

@@ -20,7 +20,7 @@
                         <div class="row">
                                 <div class="col-md-12">
                                         <div class="table-responsive col-md-12">
-                                                <table id="mytable" class="table table-bordred table-striped">
+                                                <table id="mytable" class="w3-table-all">
                                                         <thead>
                                                                 <th>ลำดับ</th>
                                                                 <th>ชื่อ</th>
@@ -34,7 +34,7 @@
                                                                 <tr>
                                                                         <td>1</td>
                                                                         <td>สารัญ</td>
-                                                                        <td><a type="submit" class="btn btn-success" href="/borrowandbackitemdetail">รายละเอียด</a></td>
+                                                                        <td><a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/borrowandbackitemdetail">รายละเอียด</a></td>
                                                                         <td>เจ้าอาวาส</td>
                                                                         <td>ใช้ในธุระส่วนตัว</td>
                                                                         <td>25/10/2019</td>
@@ -47,7 +47,7 @@
                                                                 <tr>
                                                                         <td>2</td>
                                                                         <td>สะสม</td>
-                                                                        <td><a type="submit" class="btn btn-success" href="/borrowandbackitemdetail">รายละเอียด</a></td>
+                                                                        <td><a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/borrowandbackitemdetail">รายละเอียด</a></td>
                                                                         <td>เจ้าอาวาส</td>
                                                                         <td>ใช้ในธุระส่วนตัว</td>
                                                                         <td>25/10/2019</td>
@@ -60,7 +60,7 @@
                                                                 <tr>
                                                                         <td>3</td>
                                                                         <td>มานพ</td>
-                                                                        <td><a type="submit" class="btn btn-success" href="/borrowandbackitemdetail">รายละเอียด</a></td>
+                                                                        <td><a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/borrowandbackitemdetail">รายละเอียด</a></td>
                                                                         <td>เจ้าอาวาส</td>
                                                                         <td>ใช้ในธุระส่วนตัว</td>
                                                                         <td>25/10/2019</td>
@@ -88,8 +88,9 @@
 
                                 </div>
                         </div>
-                </font>
-        </form>
+</div>
+</font>
+</form>
 </div>
 @endsection
 @section('script')

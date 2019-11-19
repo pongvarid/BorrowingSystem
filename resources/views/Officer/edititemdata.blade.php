@@ -20,7 +20,7 @@
 <div class="container">
         <div class="col-md-12 text text-center">
                 <font color="black"><h1>แก้ไขรายการพัสดุของสงฆ์</h1></font>
-            </div>< br><br>
+            </div><br><br>
                     <form>
                                 <font color="black">
                                 <div class="form-row">

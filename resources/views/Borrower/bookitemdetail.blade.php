@@ -44,7 +44,6 @@
                                 <th>ลบ</th>
                             </thead>
                             <tbody>
-
                                 <?php foreach ($data as $datas) { ?>
                                     <tr>
                                         <td>1</td>
@@ -67,8 +66,7 @@
             </div>
         </font>
     </form>
-    </div>
-@endsection
-@section('script')
-@parent
-@endsection
+    @endsection
+    @section('script')
+    @parent
+    @endsection

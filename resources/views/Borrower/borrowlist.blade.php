@@ -31,7 +31,7 @@
         </font>
     </div>
     <form>
-       
+
         <font color="black">
             <div class="row">
                 <div class="col-md-12">
@@ -82,6 +82,7 @@
             </div>
         </font>
     </form>
+</div>
     @endsection
     @section('script')
     @parent
