@@ -22,6 +22,18 @@
   <link rel="stylesheet" href="./css/le/fonts.css">
   <title>@yield('title')</title>
 
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+html,body,div,h1,h2,h3,h4,p,li,span,a{
+    font-family: 'Sarabun', sans-serif!important;
+
+} 
+.f{
+    font-family: 'Sarabun', sans-serif!important;
+
+}
+  </style>
+
 </head>
 
 <body>
