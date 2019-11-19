@@ -26,8 +26,8 @@
 @section('content')
 <div class="container col-md-8 text text-center ">
     <div class="img mb-4" style="background-image: url(images/author.jpg);"></div>
-    <div class="desc border-rounded bg-light rounded">
-        <font size="5">
+    <div class="desc">
+        <font size="6">
             <h1>ข้อมูลส่วนตัว</h1>
             <p>คุณ xxxxxxx xxxxxxxxxxxx</p>
             <p>รหัสบัตรประชาชน : xxxxxxxxxxxxx</p>
