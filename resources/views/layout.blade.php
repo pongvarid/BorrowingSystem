@@ -5,6 +5,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/position.css">
+  <link rel="stylesheet" href="./css/le/size.css">
+  <link rel="stylesheet" href="./css/le/fonts.css">
+  <link rel="stylesheet" href="./css/le/customize.css">
+  <link rel="stylesheet" href="./css/le/fonts.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -15,11 +20,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" href="./css/position.css">
-  <link rel="stylesheet" href="./css/le/size.css">
-  <link rel="stylesheet" href="./css/le/fonts.css">
-  <link rel="stylesheet" href="./css/le/customize.css">
-  <link rel="stylesheet" href="./css/le/fonts.css">
+ 
   <title>@yield('title')</title>
 
   <style>
