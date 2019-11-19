@@ -75,7 +75,7 @@ Route::get('/adduser', function () {
 
 Route::get('/borrowermange', 'BorrowerController@index');
 Route::get('/management/user', 'BorrowerController@create');
-Route::get('/management/core', 'BorrowerController@core');
+Route::post('/management/core', 'BorrowerController@core');
 
 
 Route::get('/officermanage', function () {

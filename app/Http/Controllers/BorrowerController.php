@@ -37,6 +37,12 @@ class BorrowerController extends Controller
         }
     }
 
+
+    public function core(Request $request)
+    {
+        //
+    }
+
     /**
      * Store a newly created resource in storage.
      *
