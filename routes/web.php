@@ -36,76 +36,57 @@ Route::get('/borrowlist', function () {
     return view('Borrower/borrowlist');
 });
 
-Route::get('/borrowlistdetail', function (){
+Route::get('/borrowlistdetail', function () {
     return view('Borrower/borrowlistdetail');
 });
 
-Route::get('/admin', function (){
+Route::get('/admin', function () {
     return view('Officer/indexofficer');
 });
 
-Route::get('/adminedit', function (){
+Route::get('/adminedit', function () {
     return view('Officer/editdataofficer');
 });
 
-Route::get('/waititem', function (){
+Route::get('/waititem', function () {
     return view('Officer/waititem');
 });
 
-Route::get('/waititemdetail', function (){
+Route::get('/waititemdetail', function () {
     return view('Officer/waititemdetail');
 });
 
-Route::get('/borrowandbackitem', function (){
+Route::get('/borrowandbackitem', function () {
     return view('Officer/borrowandbackitem');
 });
 
-Route::get('/borrowandbackitemdetail', function (){
+Route::get('/borrowandbackitemdetail', function () {
     return view('Officer/borrowandbackitemdetail');
 });
 
-Route::get('/typeitem', function (){
-    return view('Officer/typeitem');
-});
 
-Route::get('/addtypeitem', function (){
-    return view('Officer/addtypeitem');
-});
+Route::resource('/typeitem', ItemTypeController::class);
+Route::resource('/itemdata', ItemParcelController::class);
 
-Route::get('/edittypeitem', function (){
-    return view('Officer/edittypeitem');
-});
 
-Route::get('/itemdata', function (){
-    return view('Officer/itemdata');
-});
-
-Route::get('/additemdata', function (){
-    return view('Officer/additemdata');
-});
-
-Route::get('/edititemdata', function (){
-    return view('Officer/edititemdata');
-});
-
-Route::get('/adduser', function (){
+Route::get('/adduser', function () {
     return view('Officer/adduser');
 });
 
-Route::get('/borrowermange', 'BorrowerController@index' );
-Route::get('/management/user', 'BorrowerController@create' );
+Route::get('/borrowermange', 'BorrowerController@index');
+Route::get('/management/user', 'BorrowerController@create');
 
 
-Route::get('/officermanage', function (){
+Route::get('/officermanage', function () {
     return view('Officer/officermanage');
 });
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
-  
+
 
 Route::group(['middleware' => ['web']], function () {
- 
+
     Route::get('/', 'HomeController@index');
-    Route::get('/home', 'HomeController@index');   
+    Route::get('/home', 'HomeController@index');
 });

@@ -1,96 +1,84 @@
 @extends('layout')
 
 @section('title','รายการประเภทพัสดุของสงฆ์')
-
-@section('aside')
+@section('header')
+@parent
 @endsection
+@section('aside')
+@stopsection
 
 @section('content')
 <div class="container">
-        <div class="col-md-12 text text-center">
-                <font color="black"><h1>รายการประเภทพัสดุของสงฆ์</h1></font>
-            </div>
-                    <div class="row">
-                            <div class="col-lg-8">
-                                <a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/addtypeitem">
-                                    เพิ่ม
-                                </a>
-                                </div>
+	<div class="col-sm-12">
 
-                    </div><br>
-<form>
-        <font color="black">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="table-responsive col-md-12">
-<<<<<<< HEAD
-                        <table id="mytable" class="table table-bordred table-striped">
-                            <thead>
-                                <th>ลำดับ</th>
-                                <th>ประเภทพัสดุ</th>
-                                <th>แก้ไข</th>
-                                <th>ลบ</th>
-                            </thead>
-                            <tbody>
-                                <?php $i = 1;
-                                foreach ($data as $datas) { ?>
-                                    <tr>
-                                        <td>{{$i++}}</td>
-                                        <td>{{$datas->type_name}}</td>
-                                        <td><a class="btn btn-warning" href="/edittypeitem">แก้ไข</a></td>
-                                        <td>
-                                            <form action="{{ route('typeitem.destroy', $datas->id)}}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger" type="submit">Delete</button>
-                                            </form>
-                                        </td>
-=======
-                            <table id="mytable" class="w3-table-all">
-                                    <thead>
-                                    <th>ลำดับ</th>
-                                    <th>ประเภทพัสดุ</th>
-                                    <th>แก้ไข</th>
-                                    <th>ลบ</th>
-                                    </thead>
-                                <tbody>
-                                    <tr>
-                                    <td>1</td>
-                                    <td>เครื่องใช้ในครัว</td>
-                                    <td><a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/edittypeitem">แก้ไข</a></td>
-                                    <td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
-                                </tr>
-                                <tr>
-                                        <td>2</td>
-                                        <td>ของใช้นอกสถานที่</td>
-                                        <td><a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/edittypeitem">แก้ไข</a></td>
-                                        <td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
->>>>>>> 4e998ba8a03cca61a6295423d0c1de3264f5780b
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+		@if(session()->get('success'))
+		<div class="w3-panel w3-green w3-display-container">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+			<h3>Success!</h3>
+			<p>{{ session()->get('success') }}</p>
+		</div>
+		@endif @if(session()->get('error'))
+		<div class="w3-panel w3-red w3-display-container">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+			<h3>Error!</h3>
+			<p>{{ session()->get('error') }}</p>
+		</div>
+		@endif
+	</div>
+	<div class="col-md-12 text text-center">
+		<font color="black">
+			<h1>รายการประเภทพัสดุของสงฆ์</h1>
+		</font>
+	</div>
+	<div class="row">
+		<div class="col-lg-8">
+			<a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="{{route('typeitem.create')}}">
+				เพิ่ม
+			</a>
+		</div>
 
-                        <div class="clearfix"></div>
-                        <ul class="pagination pull-right">
-                            {!! $data->onEachSide(1)->links() !!}
-                        </ul>
+	</div>
+	<form>
+		<font color="black">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive col-md-12">
+						<table id="mytable" class="w3-table-all">
+							<thead>
+								<th>ลำดับ</th>
+								<th>ประเภทพัสดุ</th>
+								<th>แก้ไข</th>
+								<th>ลบ</th>
+							</thead>
+							<tbody>
+								<?php $i = 1;
+								foreach ($data as $datas) { ?>
+									<tr>
+										<td>{{$i++}}</td>
+										<td>{{$datas->type_name}}</td>
+										<td><a class="btn btn-warning" href="{{ route('typeitem.edit',$datas->id)}}">แก้ไข</a></td>
+										<td>
+											<form action="{{ route('typeitem.destroy', $datas->id)}}" method="post">
+												@csrf
+												@method('DELETE')
+												<button class="btn btn-danger" type="submit">Delete</button>
+											</form>
+										</td>
 
-                    </div>
-<<<<<<< HEAD
+									<?php } ?>
+							</tbody>
+						</table>
 
-                </div>
-            </div>
-        </font>
-    </form>
-</div>
-@endsection
-@section('script')
-@parent
-@endsection
-=======
-    </font>
-      </form>
-</div>
-    @endsection
->>>>>>> 4e998ba8a03cca61a6295423d0c1de3264f5780b
+						<div class="clearfix"></div>
+						<ul class="pagination pull-right">
+							{!! $data->onEachSide(1)->links() !!}
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</font>
+	</form>
+</div> @endsection @section('script') @parent @endsection</font>
+</form>
+</div> @endsection
