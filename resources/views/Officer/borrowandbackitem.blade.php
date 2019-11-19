@@ -44,7 +44,7 @@
                                     <td>เจ้าอาวาส</td>
                                     <td>ใช้ในธุระส่วนตัว</td>
                                     <td>25/10/2019</td>
-                                    <td><select class="form-control" id="exampleSelect1">
+                                    <td><select class="w3-select" id="exampleSelect1">
                                             <option>อนุมัติ</option>
                                             <option>รับของ</option>
                                             <option>คืนแล้ว</option>
@@ -57,7 +57,7 @@
                                         <td>เจ้าอาวาส</td>
                                     <td>ใช้ในธุระส่วนตัว</td>
                                     <td>25/10/2019</td>
-                                    <td><select class="form-control" id="exampleSelect1">
+                                    <td><select class="w3-select" id="exampleSelect1">
                                             <option>อนุมัติ</option>
                                             <option>รับของ</option>
                                             <option>คืนแล้ว</option>
@@ -70,7 +70,7 @@
                                             <td>เจ้าอาวาส</td>
                                     <td>ใช้ในธุระส่วนตัว</td>
                                     <td>25/10/2019</td>
-                                    <td><select class="form-control" id="exampleSelect1">
+                                    <td><select class="w3-select" id="exampleSelect1">
                                             <option>อนุมัติ</option>
                                             <option>รับของ</option>
                                             <option>คืนแล้ว</option>

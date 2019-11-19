@@ -26,7 +26,7 @@
             <div class="row">
                     <div class="col-md-12">
                     <div class="table-responsive col-md-12">
-                            <table id="mytable" class="table table-bordred table-striped">
+                            <table id="mytable" class="w3-table-all">
                                     <thead>
                                     <th>ลำดับ</th>
                                     <th>ชื่อ</th>
