@@ -6,15 +6,19 @@
     <div class="w3-container">
         <h3 class="w3-padding-64 wh"><b class="fs18">ระบบ<br><b class="fs30">ยืมคืนพัสดุของสงฆ์</b></h3>
     </div>
-    <div class="w3-bar-block"> 
-           
-        <a href="/"  class="w3-bar-item w3-button w3-hover-white ">หน้าหลัก</a> 
+    <div class="w3-bar-block">
+
+        <a href="/"  class="w3-bar-item w3-button w3-hover-white ">หน้าหลัก</a>
         <a href="/waititem"  class="w3-bar-item w3-button w3-hover-white mrt-40">รายการพัสดุรอพิจารณา</a>
         <a href="/borrowandbackitem"   class="w3-bar-item w3-button w3-hover-white">รายการยืมคืนพัสดุของสงฆ์</a>
         <a href="/typeitem"   class="w3-bar-item w3-button w3-hover-white">ข้อมูลประเภทพัสดุของสงฆ์</a>
         <a href="/itemdata"  class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลพัสดุของสงฆ์</a>
         <a href="/officermanage"   class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลเจ้าหน้าที่</a>
         <a href="/borrowermange"  class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลผู้ยืม</a>
+
+        <a href="/book" class="w3-bar-item w3-button w3-hover-white">จองพัสดุของสงฆ์</font></a>
+        <a href="/booklist" class="w3-bar-item w3-button w3-hover-white">รายการจองพัสดุของสงฆ์</font></a>
+        <a href="/borrowlist" class="w3-bar-item w3-button w3-hover-white">รายการยืมพัสดุของสงฆ์</font></a>
         <a href="/logout"  class="w3-bar-item w3-button w3-hover-white">ออกจากระบบ</a>
     </div>
 </nav>

@@ -10,37 +10,34 @@
 
 @section('content')
 <div class="container">
-    <div class="col-md-12 text text-center">
-        <font color="black">
-            <h1>รายชื่อผู้ยืม</h1>
-        </font>
+        <div class="col-md-12 text text-center">
+                <font color="black"><h1>รายชื่อผู้ยืม</h1></font>
+            </div><br>
+<form>
+    <div class="w3-cell-row">
+            <div class="w3-cell">
+                    <a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/adduser">เพิ่ม</a>
+                </div>
+
+                <div class="w3-cell">
+                        <form action="" class="search-form">
+                            <div class="form-group has-feedback">
+
+                                <input type="text" class="w3-input" name="search" id="search" placeholder="ค้นหา">
+
+                            </div>
+                        </form>
+                    </div>
+
     </div>
-    <br><br>
-        <form>
-            <div class="row">
-                <div class="col-lg-10">
-                    <a class="btn btn-success btn-lg" href="/adduser">เพิ่ม</a>
-                </div>
-
-                <div class="col-md-2">
-                    <form action="" class="search-form">
-                        <div class="form-group has-feedback">
-                            <label for="search" class="sr-only">Search</label>
-                            <input type="text" class="form-control" name="search" id="search" placeholder="ค้นหา">
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </form>
-        <form>
-            <font color="black">
-                <div class="row">
+</form><br>
+<form>
+        <font color="black">
+            <div class="w3-cell-row">
                     <div class="col-md-12">
-                        <div class="table-responsive col-md-12">
-                            <table id="mytable" class="table table-bordred table-striped">
-                                <thead>
+                    <div class="table-responsive col-md-12">
+                            <table id="mytable" class="w3-table-all">
+                                    <thead>
                                     <th>ID</th>
                                     <th>Password</th>
                                     <th>ชื่อ</th>
@@ -49,6 +46,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+<<<<<<< HEAD
                                         <td>user1</td>
                                         <td>123456789</td>
                                         <td>สารัญ</td>
@@ -56,6 +54,15 @@
                                         <td><a class="btn btn-danger" href="#">ลบ</a></td>
                                     </tr>
                             </table>
+=======
+                                    <td>user1</td>
+                                    <td>123456789</td>
+                                    <td>สารัญ</td>
+                                    <td>อยู่เย็น</td>
+                                    <td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
+                                </tr>
+                    </table>
+>>>>>>> d4df741b2506e95985181fd1e5d7834cf13c0eda
 
                             <div class="clearfix"></div>
                             <ul class="pagination pull-right">

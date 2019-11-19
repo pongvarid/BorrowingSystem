@@ -46,8 +46,11 @@ class ItemTypeController extends Controller
         $data = new ItemType();
         $data->fill($request->all());
         $save = $data->save();
-        // return $save;
-        return response()->json($save);
+        if ($data) {
+            return redirect('typeitem')->with('success', 'Type Name Save Success!');
+        } else {
+            return redirect('typeitem')->with('error', 'Type Name Error Save!');
+        }
     }
 
     /**
@@ -69,7 +72,8 @@ class ItemTypeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = ItemType::find($id);
+        return view('Officer.edittypeitem', compact('data'));
     }
 
     /**
@@ -81,9 +85,18 @@ class ItemTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = ItemType::where('id', '=', $id)
-            ->update($request->all());
-        return $data;
+        // $data = ItemType::where('id', '=', $id)
+        //     ->update($request->all());
+        // return $data;
+
+        $data = ItemType::find($id);
+        $data->type_name =  $request->get('type_name');
+        $data->save();
+        if ($data) {
+            return redirect('typeitem')->with('success', 'Edit Success!');
+        } else {
+            return redirect('typeitem')->with('error', 'Error Edit!');
+        }
     }
 
     /**

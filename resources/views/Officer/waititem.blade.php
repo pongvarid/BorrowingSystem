@@ -36,7 +36,7 @@
                                     <td>19/10/2019</td>
                                     <td>19/10/2019</td>
                                     <td>25/10/2019</td>
-                                    <td><select class="form-control" id="exampleSelect1">
+                                    <td><select class="w3-select" id="exampleSelect1">
                                             <option>รอการพิจารณา</option>
                                             <option>อนุมัติ</option>
                                             <option>ไม่อนุมัติ</option>
@@ -49,7 +49,7 @@
                                         <td>19/10/2019</td>
                                         <td>19/10/2019</td>
                                         <td>25/10/2019</td>
-                                        <td><select class="form-control" id="exampleSelect1">
+                                        <td><select class="w3-select" id="exampleSelect1">
                                                 <option>รอการพิจารณา</option>
                                                 <option>อนุมัติ</option>
                                                 <option>ไม่อนุมัติ</option>
@@ -62,7 +62,7 @@
                                             <td>19/10/2019</td>
                                             <td>19/10/2019</td>
                                             <td>25/10/2019</td>
-                                            <td><select class="form-control" id="exampleSelect1">
+                                            <td><select class="w3-select" id="exampleSelect1">
                                                     <option>รอการพิจารณา</option>
                                                     <option>อนุมัติ</option>
                                                     <option>ไม่อนุมัติ</option>

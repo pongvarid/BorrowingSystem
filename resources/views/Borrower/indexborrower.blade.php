@@ -38,7 +38,7 @@
             <p>เบอร์โทรศัพท์ : 0812345678</p>
         </font>
         <!-- <button type="button" class="btn btn-warning" href="/editdataborrower">แก้ไขข้อมูลส่วนตัว</button> -->
-        <a class="btn btn-warning" href="/editdataborrower">แก้ไขข้อมูลส่วนตัว</a>
+        <a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/editdataborrower">แก้ไขข้อมูลส่วนตัว</a>
 
     </div>
 </div>

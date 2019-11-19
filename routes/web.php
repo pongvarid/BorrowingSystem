@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/index', function () {
     return view('Borrower/indexborrower');
@@ -104,5 +102,10 @@ Route::get('/officermanage', function (){
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+  
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['web']], function () {
+ 
+    Route::get('/', 'HomeController@index');
+        
+});
