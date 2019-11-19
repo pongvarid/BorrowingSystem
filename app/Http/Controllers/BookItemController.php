@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BookItem;
+use App\BookItemDetail;
 use Illuminate\Http\Request;
 
 class BookItemController extends Controller
@@ -83,8 +84,14 @@ class BookItemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   // $id = '1';
+        $data = BookItemDetail::where('bookitem_id', '=', $id)
+            ->leftJoin('item', 'book_item_detail.bookitem_id', '=', 'item.id')
+            ->select('item.item_name', 'book_item_detail.*')
+            // ->get();
+            ->paginate(5);
+        // return $data;
+        return view('Borrower.bookitemdetail', ['data' => $data]);
     }
 
     /**

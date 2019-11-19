@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\ItemType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class ItemTypeController extends Controller
 {
@@ -13,7 +15,11 @@ class ItemTypeController extends Controller
      */
     public function index()
     {
-        //
+        $data = ItemType::paginate(5);
+        // return $data;
+        //Officer/typeitem
+
+        return view('Officer.typeitem', ['data' => $data]);
     }
 
     /**
@@ -23,7 +29,10 @@ class ItemTypeController extends Controller
      */
     public function create()
     {
-        //
+        $data = new ItemType;
+        $action = URL::route('itemtype.store');
+
+        return view('Officer.addtypeitem')->with(compact('data', 'action'));
     }
 
     /**
@@ -34,7 +43,11 @@ class ItemTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new ItemType();
+        $data->fill($request->all());
+        $save = $data->save();
+        // return $save;
+        return response()->json($save);
     }
 
     /**
@@ -68,7 +81,9 @@ class ItemTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = ItemType::where('id', '=', $id)
+            ->update($request->all());
+        return $data;
     }
 
     /**
@@ -79,6 +94,11 @@ class ItemTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data =  ItemType::where('id', '=', $id)->delete();
+        if ($data) {
+            return redirect('typeitem')->with('success', 'Type Item deleted!');;
+        } else {
+            return "error";
+        }
     }
 }

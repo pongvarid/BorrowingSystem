@@ -5,75 +5,71 @@
 @section('header')
 @parent
 @endsection
-@section('aside')
-<li><a href="/admin" ><font size="6">หน้าหลัก</font></a></li>
-<li><a href="/waititem"><font size="6">รายการพัสดุรอพิจารณา</font></a></li>
-<li><a href="/borrowandbackitem"><font size="6">รายการยืมคืนพัสดุของสงฆ์</font></a></li>
-<li class="colorlib-active"><a href="/typeitem"><font size="6">ข้อมูลประเภทพัสดุของสงฆ์</font></a></li>
-<li><a href="/itemdata"><font size="6">จัดการข้อมูลพัสดุของสงฆ์</font></a></li>
-<li><a href="/officermanage"><font size="6">จัดการข้อมูลเจ้าหน้าที่</font></a></li>
-<li><a href="/borrowermange"><font size="6">จัดการข้อมูลผู้ยืม</font></a></li>
-<li><a href="#"><font size="6">ออกจากระบบ</font></a></li>
-@endsection
 
 @section('content')
-<div class="container">
-        <div class="col-md-12 text text-center">
-                <font color="black"><h1>รายการประเภทพัสดุของสงฆ์</h1></font>
-            </div>< br><br>
-                    <div class="row">
-                            <div class="col-lg-8">
-                                    <a class="btn btn-success btn-lg" href="/addtypeitem">เพิ่ม</a>
-                                </div>
-                    </div>
-<form>
+<div>
+    @if(session()->get('success'))
+    <div class="w3-panel w3-green w3-display-container">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+        <h3>Success!</h3>
+        <p>{{ session()->get('success') }}</p>
+    </div>
+    @endif
+    <div class="col-md-12 text text-center">
+        <font color="black">
+            <h1>รายการประเภทพัสดุของสงฆ์</h1>
+        </font>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-8">
+            <a class="btn btn-success btn-lg" href="/">เพิ่ม</a>
+        </div>
+    </div>
+    <form>
         <font color="black">
             <div class="row">
-                    <div class="col-md-12">
+                <div class="col-md-12">
                     <div class="table-responsive col-md-12">
-                            <table id="mytable" class="table table-bordred table-striped">
-                                    <thead>
-                                    <th>ลำดับ</th>
-                                    <th>ประเภทพัสดุ</th>
-                                    <th>แก้ไข</th>
-                                    <th>ลบ</th>
-                                    </thead>
-                                <tbody>
+                        <table id="mytable" class="table table-bordred table-striped">
+                            <thead>
+                                <th>ลำดับ</th>
+                                <th>ประเภทพัสดุ</th>
+                                <th>แก้ไข</th>
+                                <th>ลบ</th>
+                            </thead>
+                            <tbody>
+                                <?php $i = 1;
+                                foreach ($data as $datas) { ?>
                                     <tr>
-                                    <td>1</td>
-                                    <td>เครื่องใช้ในครัว</td>
-                                    <td><a class="btn btn-warning" href="/edittypeitem">แก้ไข</a></td>
-                                    <td><a class="btn btn-danger" href="#">ลบ</a></td>
-                                </tr>
-                                <tr>
-                                        <td>2</td>
-                                        <td>ของใช้นอกสถานที่</td>
+                                        <td>{{$i++}}</td>
+                                        <td>{{$datas->type_name}}</td>
                                         <td><a class="btn btn-warning" href="/edittypeitem">แก้ไข</a></td>
-                                        <td><a class="btn btn-danger" href="#">ลบ</a></td>
+                                        <td>
+                                            <form action="{{ route('typeitem.destroy', $datas->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        </tr>
-                                </tbody>
-                    </table>
+                                <?php } ?>
+                            </tbody>
+                        </table>
 
-                <div class="clearfix"></div>
-                <ul class="pagination pull-right">
-                  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
+                        <div class="clearfix"></div>
+                        <ul class="pagination pull-right">
+                            {!! $data->onEachSide(1)->links() !!}
+                        </ul>
 
-                            </div>
-
-                        </div>
                     </div>
-    </font>
-      </form>
-    @endsection
+
+                </div>
+            </div>
+        </font>
+    </form>
+</div>
+@endsection
 @section('script')
 @parent
 @endsection

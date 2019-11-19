@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BorrowItem;
 use Illuminate\Http\Request;
 
 class BorrowItemController extends Controller
@@ -13,7 +14,24 @@ class BorrowItemController extends Controller
      */
     public function index()
     {
-        //
+        $id = '1';
+        $data = BorrowItem::where('brw_id', '=', $id)
+            ->join('borrower', 'borrow_item.brw_id', '=', 'borrower.id')
+            ->select('borrow_item.*',  'borrower.brw_prefix', 'borrower.brw_firstname', 'borrower.brw_lastname')
+            ->paginate(5);
+
+        foreach ($data as $datas) {
+            if ($datas->borrowitem_status == 1) {
+                $datas->stetus = 'อนุมัติ';
+            }
+            if ($datas->borrowitem_status == 2) {
+                $datas->stetus = 'รับของ';
+            }
+            if ($datas->borrowitem_status == 3) {
+                $datas->stetus = 'คืนแล้ว';
+            }
+        }
+        return view('Borrower.borrowlist', ['data' => $data]);
     }
 
     /**
@@ -45,7 +63,13 @@ class BorrowItemController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = BorrowItem::where('borrow_item.id', '=', $id)
+            ->join('book_item', 'borrow_item.bookitem_id', '=', 'book_item.id')
+            ->join('book_item_detail', 'book_item_detail.bookitem_id', '=', 'book_item.id')
+            ->join('item', 'book_item_detail.item_id', '=', 'item.id')
+            ->select('borrow_item.*', 'book_item.*','book_item_detail.*','item.item_name')
+            ->paginate(5);
+        return view('Borrower.bookitemdetail', ['data' => $data]);
     }
 
     /**
