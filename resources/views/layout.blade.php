@@ -36,7 +36,7 @@
 			<h1 id="colorlib-logo" ><a href="index.html"><span style="color:black;">ระบบยืมคืนพัสดุของสงฆ์</span></a></h1>
 			<nav id="colorlib-main-menu" role="navigation" >
 				<ul>
-                    <img class="img mb-4 rounded-circle" src="images/author.jpg" height="300" width="300" alt="Cinque Terre">
+                    <img class="img mb-4 rounded-circle responsive" src="images/author.jpg" height="200" width="200" alt="Cinque Terre">
                     <li>ชื่อ : xxxxxxx นามสกุล : xxxxxxx</li>
                     <li>สถานะ : xxxxxxx</li>
                     <br><br>
@@ -81,6 +81,13 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+{{-- ส่วนตาราง --}}
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
   @show
   </body>
 </html>

@@ -18,3 +18,31 @@ Route::get('/', function () {
 Route::get('/index', function (){
     return view('Borrower/indexborrower');
 });
+
+Route::get('/editdataborrower', function (){
+    return view('Borrower/editdataborrower');
+});
+
+Route::get('/book', function (){
+    return view('Borrower/bookitem');
+});
+
+Route::get('/bookitem', function (){
+    return view('Borrower/bookitemlist');
+});
+
+Route::get('/booklist', function (){
+    return view('Borrower/booklist');
+});
+
+Route::get('/bookitemdetail', function (){
+    return view('Borrower/bookitemdetail');
+});
+
+Route::get('/borrowlist', function (){
+    return view('Borrower/borrowlist');
+});
+
+Route::get('/borrowlistdetail', function (){
+    return view('Borrower/borrowlistdetail');
+});
