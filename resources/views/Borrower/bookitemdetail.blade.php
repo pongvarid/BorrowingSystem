@@ -67,7 +67,8 @@
             </div>
         </font>
     </form>
-    @endsection
-    @section('script')
-    @parent
-    @endsection
+    </div>
+@endsection
+@section('script')
+@parent
+@endsection
