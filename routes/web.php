@@ -101,3 +101,7 @@ Route::get('/borrowermange', function (){
 Route::get('/officermanage', function (){
     return view('Officer/officermanage');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
