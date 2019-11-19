@@ -25,8 +25,16 @@ class BorrowerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {    $id = $_GET['id'];
+        $type = $_GET['type'];
+        if($type == 'edit'){
+            view('Officer/borrowermange_form');
+        }else if($type == 'login'){
+            $user = $this->show($id);
+            view('Officer/borrowermange_form',['user'=>$user]);
+        }else{
+            echo 'delete';
+        }
     }
 
     /**
@@ -48,7 +56,8 @@ class BorrowerController extends Controller
      */
     public function show($id)
     {
-        //
+        $users = Borrower::find($id);
+        return $users;
     }
 
     /**

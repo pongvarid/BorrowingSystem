@@ -93,6 +93,7 @@ Route::get('/adduser', function (){
 });
 
 Route::get('/borrowermange', 'BorrowerController@index' );
+Route::get('/management/user', 'BorrowerController@create' );
 
 
 Route::get('/officermanage', function (){
