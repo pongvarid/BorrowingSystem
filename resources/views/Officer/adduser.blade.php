@@ -23,41 +23,41 @@
             </div><br><br>
 <form>
         <font color="black">
-                <div class="form-row">
-                <div class="form-group col-md-6" >
+                <div class="w3-cell-row">
+                <div class="w3-cell" >
                         <h3>สถานะผู้ใช้</h3>
-                        <select class="form-control" id="exampleSelect1">
+                        <select class="w3-select" id="exampleSelect1">
                                 <option>ผู้ยืม</option>
                                 <option>เจ้าหน้าที่</option>
                               </select>
                     </div>
                 </div>
-                <div class="form-row">
-                        <div class="form-group col-md-6" >
+                <div class="w3-cell-row">
+                        <div class="w3-cell" >
                             <h3>ชื่อผู้ใช้</h3>
-                            <input type="text" class="form-control" id="username" placeholder="ชื่อผู้ใช้">
+                            <input type="text" class="w3-input" id="username" placeholder="ชื่อผู้ใช้">
                         </div>
-                        <div class="form-group col-md-6" >
+                        <div class="w3-cell" >
                                 <h3>รหัสผ่าน</h3>
-                                <input type="password" class="form-control" id="password" placeholder="รหัสผ่าน">
+                                <input type="password" class="w3-input" id="password" placeholder="รหัสผ่าน">
                             </div>
                     </div>
-                    <div class="form-row">
-                            <div class="form-group col-md-6" >
+                    <div class="w3-cell-row">
+                            <div class="w3-cell" >
                                 <h3>ชื่อ</h3>
-                                <input type="text" class="form-control" id="name" placeholder="ชื่อ">
+                                <input type="text" class="w3-input" id="name" placeholder="ชื่อ">
                             </div>
-                            <div class="form-group col-md-6" >
+                            <div class="w3-cell" >
                                     <h3>นามสกุล</h3>
-                                    <input type="text" class="form-control" id="lastname" placeholder="นามสกุล">
+                                    <input type="text" class="w3-input" id="lastname" placeholder="นามสกุล">
                                 </div>
+                        </div><br>
+                        <div class="w3-cell-row">
+                                <div class="w3-cell">
+                            <a class="w3-button w3-white w3-border w3-border-green w3-round-large">เพิ่ม</a>
                         </div>
-                        <div class="form-row">
-                                <div class="form-group col-md-6">
-                            <a class="btn btn-success">เพิ่ม</a>
-                        </div>
-                        <div class="form-group col-md-6">
-                                <a class="btn btn-danger" href="/admin">ย้อนกลับ</a>
+                        <div class="w3-cell">
+                                <a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="/admin">ย้อนกลับ</a>
                             </div>
                     </div>
     </font>

@@ -29,8 +29,8 @@
                              xxxxxxxxxxxxxxxxxxxxxxx
                     </p>
                     <p>เบอร์โทรศัพท์ : 0812345678</p></font>
-                    <a class="btn btn-warning" href="/adminedit">แก้ไขข้อมูลส่วนตัว</a>
-                    <a class="btn btn-success" href="/adduser">เพิ่มผู้ใช้</a>
+                    <a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="/adminedit">แก้ไขข้อมูลส่วนตัว</a>
+                    <a class="w3-button w3-white w3-border w3-border-green w3-round-large"" href="/adduser">เพิ่มผู้ใช้</a>
 
                 </div>
             </div>

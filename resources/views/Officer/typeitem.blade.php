@@ -20,12 +20,12 @@
             </div>
                     <div class="row">
                             <div class="col-lg-8">
-                                <a class="w3-button w3-white w3-border w3-border-green w3-round-large">
+                                <a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/addtypeitem">
                                     เพิ่ม
                                 </a>
                                 </div>
 
-                    </div>
+                    </div><br>
 <form>
         <font color="black">
             <div class="row">
