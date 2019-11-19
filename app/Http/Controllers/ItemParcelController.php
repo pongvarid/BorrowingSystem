@@ -2,25 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use App\ItemType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 
-class ItemTypeController extends Controller
+class ItemParcelController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // type_id
     public function index()
     {
-        $data = ItemType::paginate(5);
+        $data = Item::join('item_type', 'item.type_id', '=', 'item_type.id')
+            ->paginate(5);
         // return $data;
-        //Officer/typeitem
+        // Officer/typeitem
 
-        return view('Officer.typeitem', ['data' => $data]);
+        return view('Officer.itemdata', ['data' => $data]);
     }
 
     /**
@@ -30,10 +31,11 @@ class ItemTypeController extends Controller
      */
     public function create()
     {
-        $data = new ItemType;
-        $action = URL::route('itemtype.store');
+        $data = new Item;
+        $select = ItemType::get();
+        $action = URL::route('itemdata.store');
 
-        return view('Officer.addtypeitem')->with(compact('data', 'action'));
+        return view('Officer.additemdata')->with(compact('data', 'action', 'select'));
     }
 
     /**
@@ -44,14 +46,7 @@ class ItemTypeController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new ItemType();
-        $data->fill($request->all());
-        $save = $data->save();
-        if ($data) {
-            return redirect('typeitem')->with('success', 'Type Name Save Success!');
-        } else {
-            return redirect('typeitem')->with('error', 'Type Name Error Save!');
-        }
+        //
     }
 
     /**
@@ -73,8 +68,7 @@ class ItemTypeController extends Controller
      */
     public function edit($id)
     {
-        $data = ItemType::find($id);
-        return view('Officer.edittypeitem', compact('data'));
+        //
     }
 
     /**
@@ -86,18 +80,7 @@ class ItemTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $data = ItemType::where('id', '=', $id)
-        //     ->update($request->all());
-        // return $data;
-
-        $data = ItemType::find($id);
-        $data->type_name =  $request->get('type_name');
-        $data->save();
-        if ($data) {
-            return redirect('typeitem')->with('success', 'Edit Success!');
-        } else {
-            return redirect('typeitem')->with('error', 'Error Edit!');
-        }
+        //
     }
 
     /**
@@ -108,11 +91,6 @@ class ItemTypeController extends Controller
      */
     public function destroy($id)
     {
-        $data =  ItemType::where('id', '=', $id)->delete();
-        if ($data) {
-            return redirect('typeitem')->with('success', 'Type Item deleted!');;
-        } else {
-            return "error";
-        }
+        //
     }
 }
