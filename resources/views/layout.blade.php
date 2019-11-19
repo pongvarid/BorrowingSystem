@@ -38,6 +38,7 @@ html,body,div,h1,h2,h3,h4,p,li,span,a{
 </head>
 
 <body>
+     
   @extends('layouts.navbar')
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:340px;margin-right:40px">
