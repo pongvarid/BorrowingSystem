@@ -46,3 +46,63 @@ Route::get('/borrowlist', function (){
 Route::get('/borrowlistdetail', function (){
     return view('Borrower/borrowlistdetail');
 });
+
+Route::get('/admin', function (){
+    return view('Officer/indexofficer');
+});
+
+Route::get('/adminedit', function (){
+    return view('Officer/editdataofficer');
+});
+
+Route::get('/waititem', function (){
+    return view('Officer/waititem');
+});
+
+Route::get('/waititemdetail', function (){
+    return view('Officer/waititemdetail');
+});
+
+Route::get('/borrowandbackitem', function (){
+    return view('Officer/borrowandbackitem');
+});
+
+Route::get('/borrowandbackitemdetail', function (){
+    return view('Officer/borrowandbackitemdetail');
+});
+
+Route::get('/typeitem', function (){
+    return view('Officer/typeitem');
+});
+
+Route::get('/addtypeitem', function (){
+    return view('Officer/addtypeitem');
+});
+
+Route::get('/edittypeitem', function (){
+    return view('Officer/edittypeitem');
+});
+
+Route::get('/itemdata', function (){
+    return view('Officer/itemdata');
+});
+
+Route::get('/additemdata', function (){
+    return view('Officer/additemdata');
+});
+
+Route::get('/edititemdata', function (){
+    return view('Officer/edititemdata');
+});
+
+Route::get('/adduser', function (){
+    return view('Officer/adduser');
+});
+
+Route::get('/borrowermange', function (){
+    return view('Officer/borrowermange');
+});
+
+Route::get('/officermanage', function (){
+    return view('Officer/officermanage');
+});
