@@ -17,7 +17,7 @@ class CreateBorrowerTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->integer('brw_ip');
+            $table->string('brw_ip');
             $table->string('brw_prefix');
             $table->string('brw_firstname');
             $table->string('brw_lastname');
