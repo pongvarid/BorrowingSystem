@@ -1,84 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <title>@yield('title')</title>
-  @section('header')
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://getbootstrap.com/docs/4.0/examples/floating-labels/floating-labels.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="./css/position.css">
   <link rel="stylesheet" href="./css/le/size.css">
   <link rel="stylesheet" href="./css/le/fonts.css">
   <link rel="stylesheet" href="./css/le/customize.css">
   <link rel="stylesheet" href="./css/le/fonts.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+  <title>@yield('title')</title>
 
-    html,
-    body,
-    div,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    li,
-    span,
-    a {
-      font-family: 'Sarabun', sans-serif !important;
-
-    }
-
-    .f {
-      font-family: 'Sarabun', sans-serif !important;
-
-    } 
-  </style>
 </head>
 
 <body>
-<!---
-  <div id="colorlib-page">
-    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-    <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-      <h1 id="colorlib-logo"><a href="index.html"><span style="color:black;">ระบบยืมคืนพัสดุของสงฆ์</span></a></h1>
-      <nav id="colorlib-main-menu" role="navigation">
-        <ul>
-          <img class="img mb-4 rounded-circle responsive" src="{{ URL::asset('images/author.jpg')}}" height="200"
-            width="200" alt="Cinque Terre">
-          <li>ชื่อ : xxxxxxx นามสกุล : xxxxxxx</li>
-          <li>สถานะ : xxxxxxx</li>
-          <br><br>
-          @yield('aside')
+  @extends('layouts.navbar')
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-
-        </ul>
-      </nav>
-
-    </aside> -->
-    @show
-    <div id="colorlib-main" style="background-color: green;">
-      <div class="hero-wrap js-fullheight">
-        <div class="overlay"></div>
-        <div class="js-fullheight d-flex justify-content-center align-items-center">
-          @yield('content')
-        </div>
-      </div>
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      @yield('content')
     </div>
-  </div><!-- END COLORLIB-MAIN -->
-  </div><!-- END COLORLIB-PAGE -->
-
-  <!-- loader -->
-  @section('script')
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
- 
-  @show
+  </div>
+  <script>
+    // Script to open and close sidebar
+            function w3_open() {
+              document.getElementById("mySidebar").style.display = "block";
+              document.getElementById("myOverlay").style.display = "block";
+            }
+             
+            function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+              document.getElementById("myOverlay").style.display = "none";
+            }
+            
+            // Modal Image Gallery
+            function onClick(element) {
+              document.getElementById("img01").src = element.src;
+              document.getElementById("modal01").style.display = "block";
+              var captionText = document.getElementById("caption");
+              captionText.innerHTML = element.alt;
+            }
+  </script>
 </body>
 
 </html>
