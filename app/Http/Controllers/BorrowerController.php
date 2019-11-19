@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Borrower;
 class BorrowerController extends Controller
 {
     /**
@@ -13,7 +13,10 @@ class BorrowerController extends Controller
      */
     public function index()
     {
-        //
+        $users = Borrower::get();
+        return view('Officer/borrowermange',[
+            'users' => $users
+        ]);
     }
 
     /**

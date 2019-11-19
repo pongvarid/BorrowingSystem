@@ -92,9 +92,8 @@ Route::get('/adduser', function (){
     return view('Officer/adduser');
 });
 
-Route::get('/borrowermange', function (){
-    return view('Officer/borrowermange');
-});
+Route::get('/borrowermange', 'BorrowerController@index' );
+
 
 Route::get('/officermanage', function (){
     return view('Officer/officermanage');
@@ -107,5 +106,5 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['middleware' => ['web']], function () {
  
     Route::get('/', 'HomeController@index');
-        
+    Route::get('/home', 'HomeController@index');   
 });
