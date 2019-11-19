@@ -28,7 +28,21 @@
     <link rel="stylesheet" href="{{ URL::asset('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="./css/position.css">
+        <link rel="stylesheet" href="./css/le/size.css">
+        <link rel="stylesheet" href="./css/le/fonts.css">
+        <link rel="stylesheet" href="./css/le/customize.css"> 
+        <link rel="stylesheet" href="./css/le/fonts.css">
 <style>
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+html,body,div,h1,h2,h3,h4,p,li,span,a{
+    font-family: 'Sarabun', sans-serif!important;
+
+} 
+.f{
+    font-family: 'Sarabun', sans-serif!important;
+
+}
 .search-form .form-group {
   float: right !important;
   transition: all 0.35s, border-radius 0s;
