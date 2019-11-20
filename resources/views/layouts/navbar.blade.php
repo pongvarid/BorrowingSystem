@@ -16,9 +16,9 @@
         <a href="/officermanage"   class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลเจ้าหน้าที่</a>
         <a href="/borrowermange"  class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลผู้ยืม</a>
 
-        <a href="/book" class="w3-bar-item w3-button w3-hover-white">จองพัสดุของสงฆ์</font></a>
-        <a href="/booklist" class="w3-bar-item w3-button w3-hover-white">รายการจองพัสดุของสงฆ์</font></a>
-        <a href="/borrowlist" class="w3-bar-item w3-button w3-hover-white">รายการยืมพัสดุของสงฆ์</font></a>
+        <a href="/book" class="w3-bar-item w3-button w3-hover-white">จองพัสดุของสงฆ์</a>
+        <a href="/booklist" class="w3-bar-item w3-button w3-hover-white">รายการจองพัสดุของสงฆ์</a>
+        <a href="/borrowlist" class="w3-bar-item w3-button w3-hover-white">รายการยืมพัสดุของสงฆ์</a>
         <a href="/logout"  class="w3-bar-item w3-button w3-hover-white">ออกจากระบบ</a>
     </div>
 </nav>
