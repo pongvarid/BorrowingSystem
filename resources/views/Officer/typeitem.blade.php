@@ -68,7 +68,6 @@
 									<?php } ?>
 							</tbody>
 						</table>
-
 						<div class="clearfix"></div>
 						<ul class="pagination pull-right">
 							{!! $data->onEachSide(1)->links() !!}
