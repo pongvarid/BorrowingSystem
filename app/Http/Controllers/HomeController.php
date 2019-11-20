@@ -29,9 +29,9 @@ class HomeController extends Controller
         $_SESSION["type"] = $auth->type;
 
         if($auth->type == 1){
-            return view('welcome');
+            return view('Officer/indexofficer');
         }else{
-            return view('home');
+            return view('Borrower/indexborrower');
         }
      
     }
