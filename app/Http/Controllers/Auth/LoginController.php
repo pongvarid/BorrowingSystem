@@ -42,7 +42,10 @@ class LoginController extends Controller
     public function logoutByGet()
         {
             $auth = Auth::logout();
+            session_unset();
 
+        // destroy the session
+        session_destroy();
             //return redirect('/login');
         }
 

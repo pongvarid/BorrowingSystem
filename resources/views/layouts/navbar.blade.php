@@ -11,6 +11,8 @@
          session_start();
          if(! $_SESSION["type"] ){
             $_SESSION["type"]  = 2;
+         }else{
+            $_SESSION["type"]  = 1;
          }
        
         ?>
