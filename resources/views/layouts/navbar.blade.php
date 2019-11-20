@@ -7,6 +7,13 @@
         <h3 class="w3-padding-64 wh"><b class="fs18">ระบบ<br><b class="fs30">ยืมคืนพัสดุของสงฆ์</b></h3>
     </div>
     <div class="w3-bar-block">
+        <?php 
+         session_start();
+         if(! $_SESSION["type"] ){
+            $_SESSION["type"]  = 2;
+         }
+       
+        ?>
             @if ($_SESSION["type"] == 1 )
         <a href="/"  class="w3-bar-item w3-button w3-hover-white ">หน้าหลัก</a>
         <a href="/waititem"  class="w3-bar-item w3-button w3-hover-white mrt-40">รายการพัสดุรอพิจารณา</a>
