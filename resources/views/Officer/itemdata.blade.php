@@ -10,6 +10,22 @@
 
 @section('content')
 <div class="container">
+	<div class="col-sm-12">
+
+		@if(session()->get('success'))
+		<div class="w3-panel w3-green w3-display-container">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+			<h3>Success!</h3>
+			<p>{{ session()->get('success') }}</p>
+		</div>
+		@endif @if(session()->get('error'))
+		<div class="w3-panel w3-red w3-display-container">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+			<h3>Error!</h3>
+			<p>{{ session()->get('error') }}</p>
+		</div>
+		@endif
+	</div>
 	<div class="col-md-12 text text-center">
 		<font color="black">
 			<h1>ข้อมูลพัสดุของสงฆ์</h1>
@@ -45,20 +61,22 @@
 											<td>{{$datas->item_number}}</td>
 											<td>{{$datas->item_remain}}</td>
 											<td><a class="w3-button w3-white w3-border w3-border-yellow w3-round-large" href="{{ route('itemdata.edit',$datas->id)}}">แก้ไข</a></td>
-											<td><a class="w3-button w3-white w3-border w3-border-red w3-round-large" href="#">ลบ</a></td>
+											<td>
+												<form action="{{ route('itemdata.destroy', $datas->id)}}" method="post">
+													@csrf
+													@method('DELETE')
+													<button class="btn btn-danger" type="submit">Delete</button>
+												</form>
+											</td>
 										</tr>
 									<?php } ?>
 								</tbody>
 							</table>
 							<div class="clearfix"></div>
 							<ul class="pagination pull-right">
-								<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+
+								{!! $data->links() !!}
+							</ul>
 						</div>
 					</div>
 				</div>

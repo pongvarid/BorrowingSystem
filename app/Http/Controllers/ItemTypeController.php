@@ -47,7 +47,7 @@ class ItemTypeController extends Controller
         $data = new ItemType();
         $data->fill($request->all());
         $save = $data->save();
-        if ($data) {
+        if ($save) {
             return redirect('typeitem')->with('success', 'Type Name Save Success!');
         } else {
             return redirect('typeitem')->with('error', 'Type Name Error Save!');
