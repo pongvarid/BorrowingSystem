@@ -24,7 +24,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="w3-container">
     <div class="col-md-12 text text-center">
         <font color="black">
             <h1>ตารางการยืมพัสดุของสงฆ์</h1>

@@ -8,7 +8,7 @@
 @stopsection
 
 @section('content')
-<div class="container">
+<div class="w3-container">
 	<div class="col-sm-12">
 
 		@if(session()->get('success'))
@@ -37,7 +37,7 @@
 			</a>
 		</div>
 
-	</div>
+	</div><br>
 	<form>
 		<font color="black">
 			<div class="row">
