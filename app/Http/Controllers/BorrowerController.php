@@ -28,10 +28,11 @@ class BorrowerController extends Controller
     {    $id = $_GET['id'];
         $type = $_GET['type'];
         if($type == 'edit'){
-            view('Officer/borrowermange_form');
+            $user = $this->show($id);
+            return view('Officer/management',['user'=>$user]); 
         }else if($type == 'login'){
             $user = $this->show($id);
-            view('Officer/borrowermange_form',['user'=>$user]);
+            return view('Officer/management',['user'=>$user]);
         }else{
             echo 'delete';
         }
@@ -40,7 +41,7 @@ class BorrowerController extends Controller
 
     public function core(Request $request)
     {
-        //
+        echo "asdsad";
     }
 
     /**

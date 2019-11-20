@@ -6,9 +6,9 @@
  
 <h2>จัดการข้อมูลผู้ยืม</h2>
 <hr> 
- <form action="/">
+ <form action="/core?type=edit" method="POST">
     @csrf
- <input  " value="{{ $user->user_id }}" name="user_id" type="hidden" required><br>
+    <input  value="{{ $user->user_id }}" name="user_id" type="hidden" required><br>
      <input type="text" value="{{ $user->brw_ip }}" name="brw_ip" required ><br>
      <input type="text" value="{{ $user->brw_prefix }}" name="brw_prefix" required ><br>
      <input type="text" value="{{ $user->brw_firstname }}" name="brw_firstname" required ><br>
