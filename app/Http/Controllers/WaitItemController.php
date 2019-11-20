@@ -19,8 +19,8 @@ class WaitItemController extends Controller
         $data = BookItem::join('borrower', 'book_item.brw_id', '=', 'borrower.id')
             ->select('book_item.*', 'borrower.*')
             ->paginate(5);
-        $list = array("รอการพิจารณา", "อนุมัติ", "ไม่อนุมัติ");
-        return view('Officer.waititem', compact('data', 'list'));
+        // $list = array("รอการพิจารณา", "อนุมัติ", "ไม่อนุมัติ");
+        return view('Officer.waititem', ['data' => $data]);
     }
 
     /**

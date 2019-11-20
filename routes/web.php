@@ -64,9 +64,10 @@ Route::get('/borrowandbackitemdetail', function () {
     return view('Officer/borrowandbackitemdetail');
 });
 
-
+Route::resource('/borrowandbackitem', ItemTypeController::class);
 Route::resource('/typeitem', ItemTypeController::class);
 Route::resource('/itemdata', ItemParcelController::class);
+Route::resource('/waititem', WaitItemController::class);
 
 
 Route::get('/adduser', function () {
