@@ -48,13 +48,7 @@ Route::get('/adminedit', function () {
     return view('Officer/editdataofficer');
 });
 
-Route::get('/waititem', function () {
-    return view('Officer/waititem');
-});
 
-Route::get('/waititemdetail', function () {
-    return view('Officer/waititemdetail');
-});
 
 Route::get('/borrowandbackitem', function () {
     return view('Officer/borrowandbackitem');
@@ -67,7 +61,14 @@ Route::get('/borrowandbackitemdetail', function () {
 
 Route::resource('/typeitem', ItemTypeController::class);
 Route::resource('/itemdata', ItemParcelController::class);
+Route::resource('/waititem', WaitItemController::class);
+// Route::get('/waititem', function () {
+//     return view('Officer/waititem');
+// });
 
+// Route::get('/waititemdetail', function () {
+//     return view('Officer/waititemdetail');
+// });
 
 Route::get('/adduser', function () {
     return view('Officer/adduser');
