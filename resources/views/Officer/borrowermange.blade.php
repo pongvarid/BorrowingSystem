@@ -16,12 +16,12 @@
 
 <h2>จัดการข้อมูลผู้ยืม</h2>
 <hr>
-@if (isset($login))
+@if (isset($username))
 <div class="w3-panel w3-green w3-text-white">
     <h2>สำเร็จ!</h2>
     <hr>
-    <h3>ชื่อผู้ใช้ : {{ $login['email'] }}</h3>
-    <h3>รหัสผ่าน : {{ $login['password'] }}</h3>
+    <h3>ชื่อผู้ใช้ : {{ $username }}</h3>
+    <h3>รหัสผ่าน : {{ $password }}</h3>
 </div>
 @endif
 

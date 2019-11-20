@@ -35,7 +35,7 @@
 
                 <form method="POST" action="{{ route('login') }}" class="pd-40">
                     @csrf
-                    <input id="email" type="email"
+                    <input id="email" type="text"
                         class="fs18 w3-input w3-border round @error('email') is-invalid @enderror" name="email"
                         placeholder="ชื่อผู้ใช้"
                         value="{{ old('email') }}" required autocomplete="email" autofocus>

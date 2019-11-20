@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Borrower;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class BorrowerController extends Controller
 {
@@ -52,10 +53,11 @@ class BorrowerController extends Controller
             $users->save();
             return back()->withInput();
         }else if($type == 'create'){
+            $pass = date("dmyhis").'1234';
              $user = [
                 'name' =>$request->brw_firstname ,
                 'email' => date("dmyhis"),
-                'password' => date("dmyhis").'1234' ,
+                'password' => Hash::make($pass), 
                 'type' =>  2,
              ];
 
@@ -68,7 +70,8 @@ class BorrowerController extends Controller
              $data = Borrower::get();
              return view('Officer/borrowermange',[
                  'users' => $data,
-                 'login' => $user
+                 'username' => $user['email'],
+                 'password' => $pass
              ]);
         } else{
 
