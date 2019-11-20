@@ -22,7 +22,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <h3>ชื่อ</h3>
-                    <input type="text" class="w3-input" id="name" value='{{ $data->type_name }}' placeholder="ชื่อประเภท">
+                    <input type="text" class="w3-input" id="name" value='{{ $data->type_name }}' name="type_name" placeholder="ชื่อประเภท">
                 </div>
             </div>
             <div class="form-row w3-margin">
