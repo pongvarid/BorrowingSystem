@@ -22,7 +22,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <h3>ชื่อ</h3>
-                    <input type="text" class="w3-input" id="name" placeholder="ชื่อ">
+                    <input type="text" class="w3-input" id="name" name="type_name" placeholder="ชื่อ">
                 </div>
             </div>
             </br>
