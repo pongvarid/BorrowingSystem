@@ -1,19 +1,12 @@
 @extends('layout')
 
-@section('title','รายชื่อเจ้าหน้าที่')
-
-@section('header')
-@parent
-@endsection
-@section('aside')
-@endsection
+@section('title','จองพัสดุของสงฆ์')
 
 @section('content')
-<div class="w3-container">
+<div class="container">
         <div class="col-md-12 text text-center">
                 <font color="black"><h1>รายชื่อเจ้าหน้าที่</h1></font>
             </div><br>
-<form>
     <div class="w3-cell-row">
             <div class="w3-cell">
                     <a class="w3-button w3-white w3-border w3-border-green w3-round-large" href="/adduser">เพิ่ม</a>
@@ -27,12 +20,9 @@
                         </form>
                     </div>
 
-    </div><br>
-</form>
-<form>
-        <font color="black">
-            <div class="row">
-                    <div class="col-md-12">
+    </div>
+            <div class="w3-cell-row">
+                    <div class="w3-cell">
                     <div class="table-responsive col-md-12">
                             <table id="mytable" class="w3-table-all">
                                     <thead>
@@ -64,12 +54,8 @@
                             </ul>
 
                         </div>
-
                     </div>
-    </font>
-      </form>
-    </div>
-    @endsection
-@section('script')
-@parent
+</div>
+</div>
 @endsection
+
