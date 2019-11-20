@@ -17,7 +17,7 @@ class CreateOfficeTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->integer('off_role');
+            $table->string('off_role');
             $table->string('off_nickname');
             $table->string('off_firstname');
             $table->string('off_lastname');
