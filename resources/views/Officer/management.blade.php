@@ -6,8 +6,10 @@
  
 <h2>จัดการข้อมูลผู้ยืม</h2>
 <hr> 
+<a href="/borrowermange">กลับไปหน้า จัดการเจ้าหน้าที่</a>
  <form action="/core?type=edit" method="POST">
     @csrf
+    <input  value="{{ $user->id }}" name="id" type="hidden" required><br>
     <input  value="{{ $user->user_id }}" name="user_id" type="hidden" required><br>
      <input type="text" value="{{ $user->brw_ip }}" name="brw_ip" required ><br>
      <input type="text" value="{{ $user->brw_prefix }}" name="brw_prefix" required ><br>

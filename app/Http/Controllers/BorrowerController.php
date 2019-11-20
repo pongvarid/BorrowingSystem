@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Borrower;
+use App\User;
+
 class BorrowerController extends Controller
 {
     /**
@@ -34,14 +36,43 @@ class BorrowerController extends Controller
             $user = $this->show($id);
             return view('Officer/management',['user'=>$user]);
         }else{
-            echo 'delete';
+            \DB::table('borrower')->where('user_id', $id)->delete();
+            \DB::table('users')->where('id',$id)->delete();
+            return $this->index();
         }
     }
 
 
     public function core(Request $request)
     {
-        echo "asdsad";
+        $type = $_GET['type'];
+        if($type == 'edit'){
+            $users = Borrower::find($request->id);
+            $users->fill($request->all());
+            $users->save();
+            return back()->withInput();
+        }else if($type == 'create'){
+             $user = [
+                'name' =>$request->brw_firstname ,
+                'email' => date("dmyhis"),
+                'password' => date("dmyhis").'1234' ,
+                'type' =>  2,
+             ];
+
+             $user_id =  User::insertGetId($user);
+             $form = $request->all();
+             $form['user_id']= $user_id;
+             $users = new Borrower();
+             $users->fill($form);
+             $users->save();
+             $data = Borrower::get();
+             return view('Officer/borrowermange',[
+                 'users' => $data,
+                 'login' => $user
+             ]);
+        } else{
+
+        }
     }
 
     /**
@@ -85,9 +116,10 @@ class BorrowerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        echo  $request->id;
+        return $request->id;
     }
 
     /**
