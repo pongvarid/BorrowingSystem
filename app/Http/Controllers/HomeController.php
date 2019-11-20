@@ -25,6 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         $auth = Auth::user();
+        session_start();
+        $_SESSION["type"] = $auth->type;
+
         if($auth->type == 1){
             return view('welcome');
         }else{

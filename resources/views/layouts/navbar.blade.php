@@ -7,7 +7,7 @@
         <h3 class="w3-padding-64 wh"><b class="fs18">ระบบ<br><b class="fs30">ยืมคืนพัสดุของสงฆ์</b></h3>
     </div>
     <div class="w3-bar-block">
-
+            @if ($_SESSION["type"] == 1 )
         <a href="/"  class="w3-bar-item w3-button w3-hover-white ">หน้าหลัก</a>
         <a href="/waititem"  class="w3-bar-item w3-button w3-hover-white mrt-40">รายการพัสดุรอพิจารณา</a>
         <a href="/borrowandbackitem"   class="w3-bar-item w3-button w3-hover-white">รายการยืมคืนพัสดุของสงฆ์</a>
@@ -15,10 +15,13 @@
         <a href="/itemdata"  class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลพัสดุของสงฆ์</a>
         <a href="/officermanage"   class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลเจ้าหน้าที่</a>
         <a href="/borrowermange"  class="w3-bar-item w3-button w3-hover-white">จัดการข้อมูลผู้ยืม</a>
-
+        @endif
+        @if ($_SESSION["type"] == 2 )
         <a href="/book" class="w3-bar-item w3-button w3-hover-white">จองพัสดุของสงฆ์</a>
         <a href="/booklist" class="w3-bar-item w3-button w3-hover-white">รายการจองพัสดุของสงฆ์</a>
         <a href="/borrowlist" class="w3-bar-item w3-button w3-hover-white">รายการยืมพัสดุของสงฆ์</a>
+        @endif
+       
         <a href="/logout"  class="w3-bar-item w3-button w3-hover-white">ออกจากระบบ</a>
     </div>
 </nav>
