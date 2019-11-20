@@ -48,7 +48,13 @@ Route::get('/adminedit', function () {
     return view('Officer/editdataofficer');
 });
 
+Route::get('/waititem', function () {
+    return view('Officer/waititem');
+});
 
+Route::get('/waititemdetail', function () {
+    return view('Officer/waititemdetail');
+});
 
 Route::get('/borrowandbackitem', function () {
     return view('Officer/borrowandbackitem');
@@ -61,14 +67,7 @@ Route::get('/borrowandbackitemdetail', function () {
 
 Route::resource('/typeitem', ItemTypeController::class);
 Route::resource('/itemdata', ItemParcelController::class);
-Route::resource('/waititem', WaitItemController::class);
-// Route::get('/waititem', function () {
-//     return view('Officer/waititem');
-// });
 
-// Route::get('/waititemdetail', function () {
-//     return view('Officer/waititemdetail');
-// });
 
 Route::get('/adduser', function () {
     return view('Officer/adduser');
@@ -78,10 +77,10 @@ Route::get('/borrowermange', 'BorrowerController@index');
 Route::get('/management/user', 'BorrowerController@create');
 Route::post('/core', 'BorrowerController@core');
 
-
-Route::get('/officermanage', function () {
-    return view('Officer/officermanage');
-});
+ 
+Route::get('/officermanage', 'OfficeController@index');
+Route::get('/management/office', 'OfficeController@create');
+Route::post('/cores', 'OfficeController@core');
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
